@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>rainbow</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <canvas class="canvas" width="0" height="0"></canvas>
+        <hr>
+        <textarea id="func">-(x+y)</textarea><br>
+        <t id="res"></t>
+        <hr>
+        <t id="log"></t>
+        tを変異<input type="checkbox" onclick="tchange++; if(tchange>1){tchange=0}" /><br>
+        <t id="tval"></t><input type="range" id="t-range" min="-1" max="1" step="0.01" value="0" onchange="t=this.value; document.getElementById('tval').innerHTML=t; newColorChange();" /><br>
+        倍率<input type="range" id="pm" value="8" max="100" min="1" onchange="document.getElementById('pmv').innerHTML=this.value" /><t id="pmv">8</t>
+        <hr>
+        <input type="button" value="表示モード切替" onclick="chdis();"/>
+        <script src="lib/mathematics.lib.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
